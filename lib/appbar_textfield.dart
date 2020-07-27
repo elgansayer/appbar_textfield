@@ -107,7 +107,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// If this property is null, then [ThemeData.appBarTheme.shadowColor] is used,
   /// if that is also null, the default value is fully opaque black, the appropriate
   /// color for shadows.
-  final Color shadowColor;
+  // final Color shadowColor;
 
   /// The material's shape as well its shadow.
   ///
@@ -591,7 +591,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
     this.flexibleSpace,
     this.bottom,
     this.elevation,
-    this.shadowColor,
+    // this.shadowColor,
     this.shape,
     this.backgroundColor,
     this.brightness,
@@ -736,7 +736,7 @@ class _AppBarTextFieldState extends State<AppBarTextField>
           flexibleSpace: widget.flexibleSpace,
           bottom: widget.bottom,
           elevation: widget.elevation,
-          shadowColor: widget.shadowColor,
+          // shadowColor: widget.shadowColor,
           shape: widget.shape,
           backgroundColor: widget.backgroundColor,
           brightness: widget.brightness,
