@@ -12,12 +12,14 @@ Directly using onChanged from TextField to allow a developer to use thetext valu
 
 There is no opinionated search built in!!
 
-appBar: AppBarTextfield(
+![alt-text](https://github.com/elgansayer/appbar_textfield/blob/master/example.gif?raw=true)
+
+```appBar: AppBarTextfield(
     title: Text("Contacts"),
     onBackPressed: _onRestoreAllData,
     onClearPressed: _onRestoreAllData,
     onChanged: _onSearchChanged,
-),
+),```
 
 Dependencies
 Using circular_reveal_animation from flutter pub
