@@ -210,7 +210,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// Defines the width of [leading] widget.
   ///
   /// By default, the value of `leadingWidth` is 56.0.
-  final double leadingWidth;
+  // final double leadingWidth;
 
   /// Controls the text being edited.
   ///
@@ -301,7 +301,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   final bool autofocus;
 
   /// {@macro flutter.widgets.editableText.obscuringCharacter}
-  final String obscuringCharacter;
+  // final String obscuringCharacter;
 
   /// {@macro flutter.widgets.editableText.obscureText}
   final bool obscureText;
@@ -441,7 +441,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   final double cursorWidth;
 
   /// {@macro flutter.widgets.editableText.cursorHeight}
-  final double cursorHeight;
+  // final double cursorHeight;
 
   /// {@macro flutter.widgets.editableText.cursorRadius}
   final Radius cursorRadius;
@@ -517,7 +517,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// appearance of the mouse pointer. All other properties related to "cursor"
   /// stand for the text cursor, which is usually a blinking vertical line at
   /// the editing position.
-  final MouseCursor mouseCursor;
+  // final MouseCursor mouseCursor;
 
   /// Callback that generates a custom [InputDecorator.counter] widget.
   ///
@@ -559,7 +559,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
 
   /// {@macro flutter.widgets.editableText.autofillHints}
   /// {@macro flutter.services.autofill.autofillHints}
-  final Iterable<String> autofillHints;
+  // final Iterable<String> autofillHints;
 
   // Text that shows as hintText for textField
   final String defaultHintText;
@@ -605,7 +605,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
     this.toolbarOpacity = 1.0,
     this.bottomOpacity = 1.0,
     this.toolbarHeight,
-    this.leadingWidth,
+    // this.leadingWidth,
     this.controller,
     this.focusNode,
     this.decoration,
@@ -619,7 +619,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
     this.readOnly = false,
     this.showCursor,
     this.autofocus = true,
-    this.obscuringCharacter = '•',
+    // this.obscuringCharacter = '•',
     this.obscureText = false,
     this.autocorrect = true,
     this.enableSuggestions = true,
@@ -634,7 +634,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
     this.inputFormatters,
     this.enabled,
     this.cursorWidth = 2.0,
-    this.cursorHeight,
+    // this.cursorHeight,
     this.cursorRadius,
     this.cursorColor,
     this.selectionHeightStyle = ui.BoxHeightStyle.tight,
@@ -644,11 +644,11 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
     this.dragStartBehavior = DragStartBehavior.start,
     this.enableInteractiveSelection = true,
     this.onTap,
-    this.mouseCursor,
+    // this.mouseCursor,
     this.buildCounter,
     this.scrollController,
     this.scrollPhysics,
-    this.autofillHints,
+    // this.autofillHints,
     this.keyboardType,
     this.smartDashesType,
     this.smartQuotesType,
@@ -749,8 +749,8 @@ class _AppBarTextFieldState extends State<AppBarTextField>
           titleSpacing: widget.titleSpacing,
           toolbarOpacity: widget.toolbarOpacity,
           bottomOpacity: widget.bottomOpacity,
-          toolbarHeight: widget.toolbarHeight,
-          leadingWidth: widget.leadingWidth,
+          // toolbarHeight: widget.toolbarHeight,
+          // leadingWidth: widget.leadingWidth,
           actions: <Widget>[
             ...widget.leadingActionButtons ?? [Container()],
             _searchButton(),
@@ -843,7 +843,7 @@ class _AppBarTextFieldState extends State<AppBarTextField>
                   toolbarOptions: widget.toolbarOptions,
                   showCursor: widget.showCursor,
                   autofocus: widget.autofocus ?? true,
-                  obscuringCharacter: widget.obscuringCharacter,
+                  // obscuringCharacter: widget.obscuringCharacter,
                   obscureText: widget.obscureText,
                   autocorrect: widget.autocorrect,
                   smartDashesType: widget.smartDashesType,
@@ -860,7 +860,7 @@ class _AppBarTextFieldState extends State<AppBarTextField>
                   inputFormatters: widget.inputFormatters,
                   enabled: widget.enabled,
                   cursorWidth: widget.cursorWidth,
-                  cursorHeight: widget.cursorHeight,
+                  // cursorHeight: widget.cursorHeight,
                   cursorRadius: widget.cursorRadius,
                   cursorColor: widget.cursorColor,
                   selectionHeightStyle: widget.selectionHeightStyle,
@@ -870,11 +870,11 @@ class _AppBarTextFieldState extends State<AppBarTextField>
                   dragStartBehavior: widget.dragStartBehavior,
                   enableInteractiveSelection: widget.enableInteractiveSelection,
                   onTap: widget.onTap,
-                  mouseCursor: widget.mouseCursor,
+                  // mouseCursor: widget.mouseCursor,
                   buildCounter: widget.buildCounter,
                   scrollController: widget.scrollController,
                   scrollPhysics: widget.scrollPhysics,
-                  autofillHints: widget.autofillHints,
+                  // autofillHints: widget.autofillHints,
                 ),
               ),
               _buildClearButton(),
