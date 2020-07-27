@@ -1,6 +1,6 @@
 name: appbar_textfield
 description: A flutter AppBar widget with a switchable textfield mainly used for search
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/elgansayer/appbar_textfield.git
 
 environment:
