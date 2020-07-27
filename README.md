@@ -1,16 +1,13 @@
 # appbar_textfield
 
-A flutter AppBar widget with a switchable TextField mainly used for search
+A flutter AppBar widget with a switchable TextField mainly aiming for use as a search bar.
 
-Build out of the frustration with limitations of similar widgets.
-Tis widget aims to be completely customisable and performant.
-The AppBar is fully customizable
-The TextField is fully customizable
+Built out of the frustration with limitations amd performance of similar widgets. This widget aims to be completely customisable and performant.
+Both the AppBar and TextField are fully customizable.
 
-Using a default search icon. Switches the AppBar to a TextField search bar.
-Directly using onChanged from TextField to allow a developer to use the text value as they desire.
+The customisable search icon switches the AppBar to a TextField using a reveal animation. The widget directly exposes the TextField onChanged callback to allow a developer more flexibility in their application.
 
-There is no opinionated search built in. The example contains a basic search example.
+There is no opinionated search built in. You may use whatever state management you like. The example contains a basic search example.
 
 ![alt-text](https://github.com/elgansayer/appbar_textfield/blob/master/example.gif?raw=true)
 
