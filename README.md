@@ -1,6 +1,6 @@
 # appbar_textfield
 
-A flutter AppBar widget with a switchable TextField mainly aiming for use as a search bar.
+A fully customisable Flutter AppBar widget with a switchable TextField mainly aiming for use as a search bar.
 
 Built out of the frustration with limitations amd performance of similar widgets. This widget aims to be completely customisable and performant.
 Both the AppBar and TextField are fully customizable.
