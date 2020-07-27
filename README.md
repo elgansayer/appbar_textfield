@@ -1,4 +1,4 @@
-# AppBArTextFied()
+# AppBarTextFied()
 
 A fully customisable Flutter AppBar widget with a switchable TextField mainly aiming for use as a search bar.
 
