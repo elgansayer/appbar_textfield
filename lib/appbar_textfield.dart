@@ -12,13 +12,13 @@ double kdefaultDecorationHeightOffset = 12.0;
 
 class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   // Widgets to place after the search icon
-  final List<Widget> trailingActionButtons;
+  final List<Widget>? trailingActionButtons;
   // Widgets to place before the search icon
-  final List<Widget> leadingActionButtons;
+  final List<Widget>? leadingActionButtons;
   //When back icon button is pressed
-  final VoidCallback onBackPressed;
+  final VoidCallback? onBackPressed;
   //When clear icon button is pressed
-  final VoidCallback onClearPressed;
+  final VoidCallback? onClearPressed;
 
   /// The [Builder] is used in this example to ensure that the `context` refers
   /// to that part of the subtree. That way this code snippet can be used even
@@ -30,7 +30,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///
   ///  * [Scaffold.appBar], in which an [AppBar] is usually placed.
   ///  * [Scaffold.drawer], in which the [Drawer] is usually placed.
-  final Widget leading;
+  final Widget? leading;
 
   /// Controls whether we should try to imply the leading widget if null.
   ///
@@ -69,7 +69,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///   ),
   /// )
   /// ```
-  final Widget title;
+  final Widget? title;
 
   /// This widget is stacked behind the toolbar and the tab bar. It's height will
   /// be the same as the app bar's overall height.
@@ -79,7 +79,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// changes the [AppBar]'s height when scrolled.
   ///
   /// Typically a [FlexibleSpaceBar]. See [FlexibleSpaceBar] for details.
-  final Widget flexibleSpace;
+  final Widget? flexibleSpace;
 
   /// This widget appears across the bottom of the app bar.
   ///
@@ -89,7 +89,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// See also:
   ///
   ///  * [PreferredSize], which can be used to give an arbitrary widget a preferred size.
-  final PreferredSizeWidget bottom;
+  final PreferredSizeWidget? bottom;
 
   /// The z-coordinate at which to place this app bar relative to its parent.
   ///
@@ -100,7 +100,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// If this property is null, then [ThemeData.appBarTheme.elevation] is used,
   /// if that is also null, the default value is 4, the appropriate elevation
   /// for app bars.
-  final double elevation;
+  final double? elevation;
 
   /// The color to paint the shadow below the app bar.
   ///
@@ -113,28 +113,28 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///
   /// A shadow is only displayed if the [elevation] is greater than
   /// zero.
-  final ShapeBorder shape;
+  final ShapeBorder? shape;
 
   /// The color to use for the app bar's material. Typically this should be set
   /// along with [brightness], [iconTheme], [textTheme].
   ///
   /// If this property is null, then [ThemeData.appBarTheme.color] is used,
   /// if that is also null, then [ThemeData.primaryColor] is used.
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
   /// The brightness of the app bar's material. Typically this is set along
   /// with [backgroundColor], [iconTheme], [textTheme].
   ///
   /// If this property is null, then [ThemeData.appBarTheme.brightness] is used,
   /// if that is also null, then [ThemeData.primaryColorBrightness] is used.
-  final Brightness brightness;
+  final Brightness? brightness;
 
   /// The color, opacity, and size to use for app bar icons. Typically this
   /// is set along with [backgroundColor], [brightness], [textTheme].
   ///
   /// If this property is null, then [ThemeData.appBarTheme.iconTheme] is used,
   /// if that is also null, then [ThemeData.primaryIconTheme] is used.
-  final IconThemeData iconTheme;
+  final IconThemeData? iconTheme;
 
   /// The color, opacity, and size to use for the icons that appear in the app
   /// bar's [actions]. This should only be used when the [actions] should be
@@ -143,14 +143,14 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///
   /// If this property is null, then [ThemeData.appBarTheme.actionsIconTheme] is
   /// used, if that is also null, then this falls back to [iconTheme].
-  final IconThemeData actionsIconTheme;
+  final IconThemeData? actionsIconTheme;
 
   /// The typographic styles to use for text in the app bar. Typically this is
   /// set along with [brightness] [backgroundColor], [iconTheme].
   ///
   /// If this property is null, then [ThemeData.appBarTheme.textTheme] is used,
   /// if that is also null, then [ThemeData.primaryTextTheme] is used.
-  final TextTheme textTheme;
+  final TextTheme? textTheme;
 
   /// Whether this app bar is being displayed at the top of the screen.
   ///
@@ -163,7 +163,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///
   /// If this property is null, then [ThemeData.appBarTheme.centerTitle] is used,
   /// if that is also null, then value is adapted to the current [TargetPlatform].
-  final bool centerTitle;
+  final bool? centerTitle;
 
   /// Whether the title should be wrapped with header [Semantics].
   ///
@@ -205,7 +205,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// Defines the height of the toolbar component of an [AppBar].
   ///
   /// By default, the value of `toolbarHeight` is [kToolbarHeight].
-  final double toolbarHeight;
+  final double? toolbarHeight;
 
   /// Defines the width of [leading] widget.
   ///
@@ -215,7 +215,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// Controls the text being edited.
   ///
   /// If null, this widget will create its own [TextEditingController].
-  final TextEditingController controller;
+  final TextEditingController? controller;
 
   /// Defines the keyboard focus for this widget.
   ///
@@ -255,7 +255,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///
   /// This widget builds an [EditableText] and will ensure that the keyboard is
   /// showing when it is tapped by calling [EditableTextState.requestKeyboard()].
-  final FocusNode focusNode;
+  final FocusNode? focusNode;
 
   /// The decoration to show around the text field.
   ///
@@ -264,16 +264,16 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///
   /// Specify null to remove the decoration entirely (including the
   /// extra padding introduced by the decoration to save space for the labels).
-  final InputDecoration decoration;
+  final InputDecoration? decoration;
 
   /// {@macro flutter.widgets.editableText.keyboardType}
-  final TextInputType keyboardType;
+  final TextInputType? keyboardType;
 
   /// The type of action button to use for the keyboard.
   ///
   /// Defaults to [TextInputAction.newline] if [keyboardType] is
   /// [TextInputType.multiline] and [TextInputAction.done] otherwise.
-  final TextInputAction textInputAction;
+  final TextInputAction? textInputAction;
 
   /// {@macro flutter.widgets.editableText.textCapitalization}
   final TextCapitalization textCapitalization;
@@ -283,19 +283,19 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// This text style is also used as the base style for the [decoration].
   ///
   /// If null, defaults to the `subtitle1` text style from the current [Theme].
-  final TextStyle style;
+  final TextStyle? style;
 
   /// {@macro flutter.widgets.editableText.strutStyle}
-  final StrutStyle strutStyle;
+  final StrutStyle? strutStyle;
 
   /// {@macro flutter.widgets.editableText.textAlign}
   final TextAlign textAlign;
 
   /// {@macro flutter.widgets.inputDecorator.textAlignVertical}
-  final TextAlignVertical textAlignVertical;
+  final TextAlignVertical? textAlignVertical;
 
   /// {@macro flutter.widgets.editableText.textDirection}
-  final TextDirection textDirection;
+  final TextDirection? textDirection;
 
   /// {@macro flutter.widgets.editableText.autofocus}
   final bool autofocus;
@@ -310,10 +310,10 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   final bool autocorrect;
 
   /// {@macro flutter.services.textInput.smartDashesType}
-  final SmartDashesType smartDashesType;
+  final SmartDashesType? smartDashesType;
 
   /// {@macro flutter.services.textInput.smartQuotesType}
-  final SmartQuotesType smartQuotesType;
+  final SmartQuotesType? smartQuotesType;
 
   /// {@macro flutter.services.textInput.enableSuggestions}
   final bool enableSuggestions;
@@ -322,7 +322,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   final int maxLines;
 
   /// {@macro flutter.widgets.editableText.minLines}
-  final int minLines;
+  final int? minLines;
 
   /// {@macro flutter.widgets.editableText.expands}
   final bool expands;
@@ -335,10 +335,10 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// If not set, select all and paste will default to be enabled. Copy and cut
   /// will be disabled if [obscureText] is true. If [readOnly] is true,
   /// paste and cut will be disabled regardless.
-  final ToolbarOptions toolbarOptions;
+  final ToolbarOptions? toolbarOptions;
 
   /// {@macro flutter.widgets.editableText.showCursor}
-  final bool showCursor;
+  final bool? showCursor;
 
   /// If [maxLength] is set to this value, only the "current input length"
   /// part of the character counter is shown.
@@ -353,7 +353,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// to [TextField.noMaxLength] then only the current character count is displayed.
   ///
   /// After [maxLength] characters have been input, additional input
-  /// is ignored, unless [maxLengthEnforced] is set to false. The text field
+  /// is ignored, unless [maxLengthEnforcement] is set to false. The text field
   /// enforces the length with a [LengthLimitingTextInputFormatter], which is
   /// evaluated after the supplied [inputFormatters], if any.
   ///
@@ -365,7 +365,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// Whitespace characters (e.g. newline, space, tab) are included in the
   /// character count.
   ///
-  /// If [maxLengthEnforced] is set to false, then more than [maxLength]
+  /// If [maxLengthEnforcement] is set to false, then more than [maxLength]
   /// characters may be entered, but the error counter and divider will
   /// switch to the [decoration.errorStyle] when the limit is exceeded.
   ///
@@ -395,15 +395,15 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///
   ///  * [LengthLimitingTextInputFormatter] for more information on how it
   ///    counts characters, and how it may differ from the intuitive meaning.
-  final int maxLength;
+  final int? maxLength;
 
   /// If true, prevents the field from allowing more than [maxLength]
   /// characters.
   ///
-  /// If [maxLength] is set, [maxLengthEnforced] indicates whether or not to
+  /// If [maxLength] is set, [maxLengthEnforcement] indicates whether or not to
   /// enforce the limit, or merely provide a character counter and warning when
   /// [maxLength] is exceeded.
-  final bool maxLengthEnforced;
+  final MaxLengthEnforcement? maxLengthEnforcement;
 
   /// {@macro flutter.widgets.editableText.onChanged}
   ///
@@ -413,10 +413,10 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///    runs and can validate and change ("format") the input value.
   ///  * [onEditingComplete], [onSubmitted], [onSelectionChanged]:
   ///    which are more specialized input change notifications.
-  final ValueChanged<String> onChanged;
+  final ValueChanged<String>? onChanged;
 
   /// {@macro flutter.widgets.editableText.onEditingComplete}
-  final VoidCallback onEditingComplete;
+  final VoidCallback? onEditingComplete;
 
   /// {@macro flutter.widgets.editableText.onSubmitted}
   ///
@@ -425,17 +425,17 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///  * [EditableText.onSubmitted] for an example of how to handle moving to
   ///    the next/previous field when using [TextInputAction.next] and
   ///    [TextInputAction.previous] for [textInputAction].
-  final ValueChanged<String> onSubmitted;
+  final ValueChanged<String>? onSubmitted;
 
   /// {@macro flutter.widgets.editableText.inputFormatters}
-  final List<TextInputFormatter> inputFormatters;
+  final List<TextInputFormatter>? inputFormatters;
 
   /// If false the text field is "disabled": it ignores taps and its
   /// [decoration] is rendered in grey.
   ///
   /// If non-null this property overrides the [decoration]'s
   /// [Decoration.enabled] property.
-  final bool enabled;
+  final bool? enabled;
 
   /// {@macro flutter.widgets.editableText.cursorWidth}
   final double cursorWidth;
@@ -444,13 +444,13 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   // final double cursorHeight;
 
   /// {@macro flutter.widgets.editableText.cursorRadius}
-  final Radius cursorRadius;
+  final Radius? cursorRadius;
 
   /// The color to use when painting the cursor.
   ///
-  /// Defaults to [ThemeData.cursorColor] or [CupertinoTheme.primaryColor]
+  /// Defaults to [TextSelectionThemeData.cursorColor] or [CupertinoTheme.primaryColor]
   /// depending on [ThemeData.platform].
-  final Color cursorColor;
+  final Color? cursorColor;
 
   /// Controls how tall the selection highlight boxes are computed to be.
   ///
@@ -467,7 +467,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// This setting is only honored on iOS devices.
   ///
   /// If unset, defaults to the brightness of [ThemeData.primaryColorBrightness].
-  final Brightness keyboardAppearance;
+  final Brightness? keyboardAppearance;
 
   /// {@macro flutter.widgets.editableText.scrollPadding}
   final EdgeInsets scrollPadding;
@@ -498,7 +498,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// To listen to arbitrary pointer events without competing with the
   /// text field's internal gesture detector, use a [Listener].
   /// {@endtemplate}
-  final GestureTapCallback onTap;
+  final GestureTapCallback? onTap;
 
   /// The cursor for a mouse pointer when it enters or is hovering over the
   /// widget.
@@ -549,13 +549,13 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   ///
   /// If buildCounter returns null, then no counter and no Semantics widget will
   /// be created at all.
-  final InputCounterWidgetBuilder buildCounter;
+  final InputCounterWidgetBuilder? buildCounter;
 
   /// {@macro flutter.widgets.editableText.scrollPhysics}
-  final ScrollPhysics scrollPhysics;
+  final ScrollPhysics? scrollPhysics;
 
   /// {@macro flutter.widgets.editableText.scrollController}
-  final ScrollController scrollController;
+  final ScrollController? scrollController;
 
   /// {@macro flutter.widgets.editableText.autofillHints}
   /// {@macro flutter.services.autofill.autofillHints}
@@ -582,7 +582,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   final Icon backBtnIcon;
 
   AppBarTextField({
-    Key key,
+    Key? key,
     this.trailingActionButtons,
     this.leadingActionButtons,
     this.leading,
@@ -627,7 +627,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
     this.minLines,
     this.expands = false,
     this.maxLength,
-    this.maxLengthEnforced = true,
+    this.maxLengthEnforcement = MaxLengthEnforcement.enforced,
     this.onChanged,
     this.onEditingComplete,
     this.onSubmitted,
@@ -663,7 +663,7 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
     this.onBackPressed,
     this.onClearPressed,
   })  : preferredSize = Size.fromHeight(toolbarHeight ??
-            kToolbarHeight + (bottom?.preferredSize?.height ?? 0.0)),
+            kToolbarHeight + (bottom?.preferredSize.height ?? 0.0)),
         super(key: key);
 
   @override
@@ -674,23 +674,19 @@ class _AppBarTextFieldState extends State<AppBarTextField>
     with SingleTickerProviderStateMixin {
   SearchState _searchState = SearchState.title;
 
-  Animation<double> _revealAnimation;
-  AnimationController _revealAnimationController;
+  late Animation<double> _revealAnimation;
+  late AnimationController _revealAnimationController;
   GlobalKey _appBarKey = GlobalKey();
   GlobalKey _searchIconBtnKey = GlobalKey();
-  TextEditingController _textController;
+  late TextEditingController _textController;
   bool _showClearButton = false;
-  Offset _searchBtnPosition;
+  Offset? _searchBtnPosition;
 
   @override
   void initState() {
     super.initState();
 
-    if (widget.controller == null) {
-      _textController = TextEditingController();
-    } else {
-      _textController = widget.controller;
-    }
+    _textController = widget.controller ?? TextEditingController();
 
     this._textController.addListener(_onTextController);
 
@@ -773,18 +769,19 @@ class _AppBarTextFieldState extends State<AppBarTextField>
 
   void _onBackPressed() {
     if (widget.onBackPressed != null) {
-      widget.onBackPressed();
+      widget.onBackPressed!();
     }
 
     _onSearchPressed();
   }
 
   void _onSearchPressed() {
-    RenderBox renderBoxAppBar = _appBarKey.currentContext.findRenderObject();
+    RenderBox renderBoxAppBar =
+        _appBarKey.currentContext!.findRenderObject() as RenderBox;
     Size appBarSize = renderBoxAppBar.size;
 
     RenderBox renderBoxSearchBtn =
-        _searchIconBtnKey.currentContext.findRenderObject();
+        _searchIconBtnKey.currentContext!.findRenderObject() as RenderBox;
     Size btnSize = renderBoxSearchBtn.size;
 
     // Get the position of the search button widget,
@@ -842,7 +839,7 @@ class _AppBarTextFieldState extends State<AppBarTextField>
                   readOnly: widget.readOnly,
                   toolbarOptions: widget.toolbarOptions,
                   showCursor: widget.showCursor,
-                  autofocus: widget.autofocus ?? true,
+                  autofocus: widget.autofocus,
                   // obscuringCharacter: widget.obscuringCharacter,
                   obscureText: widget.obscureText,
                   autocorrect: widget.autocorrect,
@@ -853,7 +850,7 @@ class _AppBarTextFieldState extends State<AppBarTextField>
                   minLines: widget.minLines,
                   expands: widget.expands,
                   maxLength: widget.maxLength,
-                  maxLengthEnforced: widget.maxLengthEnforced,
+                  maxLengthEnforcement: widget.maxLengthEnforcement,
                   onChanged: widget.onChanged,
                   onEditingComplete: widget.onEditingComplete,
                   onSubmitted: widget.onSubmitted,
@@ -897,12 +894,12 @@ class _AppBarTextFieldState extends State<AppBarTextField>
       onPressed: () {
         //Clear pressed feedback
         if (widget.onClearPressed != null) {
-          widget.onClearPressed();
+          widget.onClearPressed!();
         }
 
         // Text is cleared
         if (widget.onChanged != null) {
-          widget.onChanged('');
+          widget.onChanged!('');
         }
 
         this._textController.clear();

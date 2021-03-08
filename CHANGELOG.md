@@ -1,3 +1,5 @@
+## [2.0] - Migrate to null-safety
+
 ## [1.0.1+1] - Use flutter stable channel
 
 * Rebuilt example to work with flutter stable
