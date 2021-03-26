@@ -30,14 +30,14 @@ class MyApp extends StatelessWidget {
 }
 
 class ListScreen extends StatefulWidget {
-  ListScreen({Key key}) : super(key: key);
+  ListScreen({Key? key}) : super(key: key);
 
   @override
   _ListScreenState createState() => _ListScreenState();
 }
 
 class _ListScreenState extends State<ListScreen> {
-  List<Contact> _allContacts = List<Contact>();
+  List<Contact> _allContacts = <Contact>[];
   StreamController<List<Contact>> _contactStream =
       StreamController<List<Contact>>();
 
@@ -84,7 +84,7 @@ class _ListScreenState extends State<ListScreen> {
     return StreamBuilder<List<Contact>>(
         stream: _contactStream.stream,
         builder: (context, snapshot) {
-          List<Contact> contacts = snapshot.hasData ? snapshot.data : [];
+          List<Contact> contacts = snapshot.hasData ? snapshot.data! : [];
 
           return ListView.builder(
             itemCount: contacts.length,
