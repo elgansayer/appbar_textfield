@@ -8,6 +8,7 @@ import 'dart:ui' as ui show BoxHeightStyle, BoxWidthStyle;
 import 'package:flutter/services.dart';
 
 enum SearchState { title, searching }
+
 double kdefaultDecorationHeightOffset = 12.0;
 
 class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
@@ -148,9 +149,11 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
   /// The typographic styles to use for text in the app bar. Typically this is
   /// set along with [brightness] [backgroundColor], [iconTheme].
   ///
-  /// If this property is null, then [ThemeData.appBarTheme.textTheme] is used,
-  /// if that is also null, then [ThemeData.primaryTextTheme] is used.
-  final TextTheme? textTheme;
+  /// Used for customizing [AppBar] title text
+  final TextStyle? titleTextStyle;
+
+  /// Used for customizing [AppBar] toolbar text
+  final TextStyle? toolbarTextStyle;
 
   /// Whether this app bar is being displayed at the top of the screen.
   ///
@@ -597,7 +600,8 @@ class AppBarTextField extends StatefulWidget implements PreferredSizeWidget {
     this.brightness,
     this.iconTheme,
     this.actionsIconTheme,
-    this.textTheme,
+    this.titleTextStyle,
+    this.toolbarTextStyle,
     this.primary = true,
     this.centerTitle,
     this.excludeHeaderSemantics = false,
@@ -735,10 +739,12 @@ class _AppBarTextFieldState extends State<AppBarTextField>
           // shadowColor: widget.shadowColor,
           shape: widget.shape,
           backgroundColor: widget.backgroundColor,
-          brightness: widget.brightness,
+          systemOverlayStyle:
+              SystemUiOverlayStyle(statusBarBrightness: widget.brightness),
           iconTheme: widget.iconTheme,
           actionsIconTheme: widget.actionsIconTheme,
-          textTheme: widget.textTheme,
+          titleTextStyle: widget.titleTextStyle,
+          toolbarTextStyle: widget.toolbarTextStyle,
           primary: widget.primary,
           centerTitle: widget.centerTitle,
           excludeHeaderSemantics: widget.excludeHeaderSemantics,
